@@ -2,4 +2,22 @@
   document.querySelector(".btn").onclick = () => {
     document.querySelector("section").scrollIntoView({ behavior: "smooth" });
   };
+<script>
+function sendMessage() {
+  const input = document.getElementById("userInput");
+  const message = input.value.trim();
+  if (!message) return;
+
+  const chatBox = document.getElementById("chat-box");
+
+  chatBox.innerHTML += `<div class="user">${message}</div>`;
+
+  setTimeout(() => {
+    chatBox.innerHTML += `<div class="ai">🤖 Samjha! Ye AI Chat demo hai. Real AI brain next step me connect hoga 🔥</div>`;
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }, 700);
+
+  input.value = "";
+}
+</script>
 </script>
