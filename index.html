@@ -93,4 +93,39 @@
 </footer>
 
 </body>
+  <script>
+function sendMessage() {
+  const input = document.getElementById("userInput");
+  const msg = input.value.toLowerCase().trim();
+  if (!msg) return;
+
+  const chatBox = document.getElementById("chat-box");
+  chatBox.innerHTML += `<div class="user">${input.value}</div>`;
+
+  let reply = "🤖 Main madad ke liye hoon. Aap thoda clear likhiye 🙂";
+
+  if (msg.includes("hello") || msg.includes("hi") || msg.includes("assalam")) {
+    reply = "👋 Assalamu Alaikum! Main NomanX AI hoon. Aap kya jaan-na chahte ho?";
+  } 
+  else if (msg.includes("nomanx")) {
+    reply = "🚀 NomanX AI ek all-in-one AI platform hai jo creators, students aur businesses ke liye bana hai.";
+  }
+  else if (msg.includes("features")) {
+    reply = "✨ AI Chat, Design Tools, Content Generator, Business AI, aur bahut kuch — sab ek hi jagah!";
+  }
+  else if (msg.includes("owner")) {
+    reply = "👑 NomanX AI ke owner aur creator hain Noman Ali.";
+  }
+  else if (msg.includes("help")) {
+    reply = "🧠 Aap mujhse AI, business, study, content, website ya tools ke baare me puch sakte ho.";
+  }
+
+  setTimeout(() => {
+    chatBox.innerHTML += `<div class="ai">${reply}</div>`;
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }, 600);
+
+  input.value = "";
+}
+  </script>
 </html>
