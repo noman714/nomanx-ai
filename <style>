@@ -139,3 +139,31 @@
   cursor: pointer;
 }
 </style>
+#login {
+  padding: 60px 20px;
+  background: #020617;
+}
+
+.login-box {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.login-box input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+.login-box button {
+  padding: 14px 24px;
+  border-radius: 30px;
+  border: none;
+  background: #00c6ff;
+  font-weight: bold;
+  cursor: pointer;
+}
