@@ -44,7 +44,8 @@ function sendMessage(){
 const input=document.getElementById("userInput");
 const msg=input.value.trim();
 if(!msg)return;
-const name=localStorage.getItem("nomanxUser")||"Guest";
+const name = (localStorage.getItem("nomanxUser") || "Guest") +
+" (" + (localStorage.getItem("nomanxPlan") || "FREE") + ")";
 const box=document.getElementById("chat-box");
 box.innerHTML+=`<div class="user"><b>${name}:</b> ${msg}</div>`;
 setTimeout(()=>{
