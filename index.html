@@ -194,6 +194,8 @@ function sendMessage() {
     chatBox.scrollTop = chatBox.scrollHeight;
   }, 600);
 
+  const userName = localStorage.getItem("nomanxUser") || "Guest";
+chatBox.innerHTML += `<div class="user"><b>${userName}:</b> ${userText}</div>`;
   input.value = "";
 }
 </script>
