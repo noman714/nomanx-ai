@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NomanX AI | Chat</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{margin:0;font-family:Segoe UI;background:#0b0f19;color:white;text-align:center}
+nav{padding:15px;background:#020617}
+nav a{color:#00c6ff;margin:0 10px;text-decoration:none;font-weight:bold}
+#chat-box{max-width:800px;margin:30px auto;padding:20px;background:#020617;border-radius:15px;text-align:left;min-height:250px}
+#chat-box div{margin-bottom:10px;padding:10px;border-radius:10px}
+.user{background:#00c6ff;color:black;text-align:right}
+.ai{background:#1e293b}
+.chat-input{max-width:800px;margin:auto;display:flex;gap:10px}
+.chat-input input{flex:1;padding:14px;border-radius:30px;border:none}
+.chat-input button{padding:14px 24px;border-radius:30px;border:none;background:#00c6ff;font-weight:bold}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="chat.html">Chat</a>
+<a href="features.html">Features</a>
+<a href="about.html">About</a>
+</nav>
+
+<h2>🤖 NomanX AI Chat</h2>
+
+<div id="chat-box">
+<div class="ai">👋 Assalamu Alaikum! Main NomanX AI hoon.</div>
+</div>
+
+<div class="chat-input">
+<input id="userInput" placeholder="Type your message..." />
+<button onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+function sendMessage(){
+const input=document.getElementById("userInput");
+const msg=input.value.trim();
+if(!msg)return;
+const name=localStorage.getItem("nomanxUser")||"Guest";
+const box=document.getElementById("chat-box");
+box.innerHTML+=`<div class="user"><b>${name}:</b> ${msg}</div>`;
+setTimeout(()=>{
+box.innerHTML+=`<div class="ai">🤖 Main AI, study, business aur content me madad karta hoon.</div>`;
+box.scrollTop=box.scrollHeight;
+},500);
+input.value="";
+}
+</script>
+
+</body>
+</html>
