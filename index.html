@@ -127,5 +127,75 @@ function sendMessage() {
 
   input.value = "";
 }
+<script>
+function sendMessage() {
+  const input = document.getElementById("userInput");
+  const userText = input.value.trim();
+  const msg = userText.toLowerCase();
+  if (!msg) return;
+
+  const chatBox = document.getElementById("chat-box");
+  chatBox.innerHTML += `<div class="user">${userText}</div>`;
+
+  let reply = "🤖 Mujhe thoda aur detail chahiye, phir main better jawab de sakta hoon 🙂";
+
+  // Greetings
+  if (msg.includes("hi") || msg.includes("hello") || msg.includes("assalam")) {
+    reply = "👋 Assalamu Alaikum! Main **NomanX AI** hoon. Bataiye main aapki kis tarah madad kar sakta hoon?";
+  }
+
+  // About NomanX AI
+  else if (msg.includes("nomanx") || msg.includes("about")) {
+    reply = "🚀 **NomanX AI** ek professional AI platform hai jo chat, content, design aur business help ke liye bana hai.";
+  }
+
+  // Features
+  else if (msg.includes("feature")) {
+    reply = "✨ Features: AI Chat Assistant, Content Writing, Design Help, Business Ideas, Study Support aur future me aur powerful tools.";
+  }
+
+  // Owner
+  else if (msg.includes("owner") || msg.includes("creator")) {
+    reply = "👑 **NomanX AI** ke owner aur developer hain **Noman Ali**.";
+  }
+
+  // Study
+  else if (msg.includes("study") || msg.includes("exam")) {
+    reply = "📚 Main study help kar sakta hoon — concepts, notes, tips aur exam preparation guidance.";
+  }
+
+  // Business
+  else if (msg.includes("business") || msg.includes("startup") || msg.includes("earn")) {
+    reply = "💼 Main business ideas, online earning tips aur startup planning me madad karta hoon.";
+  }
+
+  // AI / Technology
+  else if (msg.includes("ai") || msg.includes("artificial")) {
+    reply = "🧠 AI ka matlab Artificial Intelligence — jo machines ko sochne aur madad karne layak banata hai.";
+  }
+
+  // Website / App
+  else if (msg.includes("website") || msg.includes("app")) {
+    reply = "🌐 Main website aur app planning, features aur improvement ideas de sakta hoon.";
+  }
+
+  // Help
+  else if (msg.includes("help") || msg.includes("support")) {
+    reply = "🆘 Aap mujhse padhai, business, AI, content, website ya ideas ke baare me kuch bhi puch sakte ho.";
+  }
+
+  // Default intelligent fallback
+  else {
+    reply = "🤖 Interesting question! Main AI, study, business, content aur technology me madad karta hoon. Thoda clear likhiye 🙂";
+  }
+
+  setTimeout(() => {
+    chatBox.innerHTML += `<div class="ai">${reply}</div>`;
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }, 600);
+
+  input.value = "";
+}
+</script>
   </script>
 </html>
