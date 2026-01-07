@@ -167,3 +167,42 @@
   font-weight: bold;
   cursor: pointer;
 }
+#plans {
+  padding: 60px 20px;
+  background: #0b1220;
+}
+
+.plan-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.plan {
+  background: #111827;
+  padding: 25px;
+  border-radius: 18px;
+  width: 260px;
+}
+
+.plan.pro {
+  border: 2px solid #00c6ff;
+}
+
+.plan button {
+  margin-top: 15px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: none;
+  background: #00c6ff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#currentPlan {
+  margin-top: 20px;
+  font-weight: bold;
+}
