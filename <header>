@@ -1,0 +1,11 @@
+<section id="login">
+  <h2>🔐 Login to NomanX AI</h2>
+
+  <div class="login-box">
+    <input type="text" id="username" placeholder="Enter your name" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <p id="welcome" style="display:none; font-weight:bold;"></p>
+  <button id="logoutBtn" style="display:none;" onclick="logout()">Logout</button>
+</section>
