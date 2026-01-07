@@ -1,0 +1,5 @@
+<script>
+  document.querySelector(".btn").onclick = () => {
+    document.querySelector("section").scrollIntoView({ behavior: "smooth" });
+  };
+</script>
