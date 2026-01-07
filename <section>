@@ -1,0 +1,12 @@
+<section id="chat">
+  <h2>🤖 NomanX AI Assistant</h2>
+
+  <div id="chat-box">
+    <div class="ai">👋 Assalamu Alaikum! Main NomanX AI hoon. Aap kya puchna chahoge?</div>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Type your question..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</section>
