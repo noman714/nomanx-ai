@@ -197,5 +197,79 @@ function sendMessage() {
   input.value = "";
 }
 </script>
+  <script>
+function sendMessage() {
+  const input = document.getElementById("userInput");
+  const userText = input.value.trim();
+  const msg = userText.toLowerCase();
+  if (!msg) return;
+
+  const chatBox = document.getElementById("chat-box");
+  chatBox.innerHTML += `<div class="user">${userText}</div>`;
+
+  let reply = "🤖 Aapka sawal interesting hai. Thoda detail me likhiye taaki main best jawab de sakoon 🙂";
+
+  const rules = [
+    // Greetings
+    { k: ["hi","hello","assalam","salam"], r: "👋 Assalamu Alaikum! Main **NomanX AI** hoon. Aap kis topic par madad chahte ho?" },
+
+    // About
+    { k: ["nomanx","about","platform"], r: "🚀 **NomanX AI** ek all-in-one AI platform hai jo chat, content, design, study aur business help deta hai." },
+
+    // Owner
+    { k: ["owner","creator","developer"], r: "👑 **NomanX AI** ke owner aur developer hain **Noman Ali**." },
+
+    // Features
+    { k: ["features","tools","kya kar sakta"], r: "✨ AI Chat, Content Writing, Design Ideas, Business Help, Study Support, Website Planning aur future AI tools." },
+
+    // Study
+    { k: ["study","exam","notes","padhai"], r: "📚 Main concepts samjha sakta hoon, notes bana sakta hoon aur exam tips de sakta hoon." },
+
+    // Business
+    { k: ["business","startup","earning","pais"], r: "💼 Main business ideas, online earning methods aur startup planning me madad karta hoon." },
+
+    // Content
+    { k: ["content","youtube","reel","script"], r: "🎬 Main YouTube scripts, reel ideas, captions aur content plans bana sakta hoon." },
+
+    // Design
+    { k: ["design","poster","logo","thumbnail"], r: "🎨 Main design ideas, color suggestions aur layout guidance de sakta hoon." },
+
+    // Website
+    { k: ["website","web","landing","seo"], r: "🌐 Main website structure, landing page ideas aur SEO basics samjha sakta hoon." },
+
+    // App
+    { k: ["app","android","ios"], r: "📱 Main app features planning aur UI ideas me madad karta hoon." },
+
+    // AI
+    { k: ["ai","artificial","machine"], r: "🧠 AI ka matlab Artificial Intelligence — jo machines ko smart banata hai taaki wo humans ki madad kar saken." },
+
+    // Help
+    { k: ["help","support","madad"], r: "🆘 Aap mujhse AI, study, business, content, website ya ideas ke baare me kuch bhi puch sakte ho." },
+
+    // Pricing
+    { k: ["free","price","subscription"], r: "💳 Abhi NomanX AI free hai. Future me Pro features subscription ke sath aayenge." },
+
+    // Future
+    { k: ["future","roadmap","plan"], r: "🚀 Future me real AI brain, login system, premium tools aur mobile app aayenge." },
+
+    // Thanks
+    { k: ["thanks","thank you","shukriya"], r: "😊 Aapka shukriya! Main yahin hoon madad ke liye." }
+  ];
+
+  for (let rule of rules) {
+    if (rule.k.some(word => msg.includes(word))) {
+      reply = rule.r;
+      break;
+    }
+  }
+
+  setTimeout(() => {
+    chatBox.innerHTML += `<div class="ai">${reply}</div>`;
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }, 500);
+
+  input.value = "";
+}
+  </script>
   </script>
 </html>
