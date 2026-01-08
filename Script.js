@@ -183,3 +183,26 @@ window.onload = () => {
   updatePlan();
 };
 </script>
+function canSendMessage() {
+  const plan = localStorage.getItem("nomanxPlan") || "FREE";
+
+  if (plan === "PRO") return true;
+
+  const today = new Date().toDateString();
+  const savedDate = localStorage.getItem("nomanxDate");
+
+  if (savedDate !== today) {
+    localStorage.setItem("nomanxDate", today);
+    localStorage.setItem("nomanxCount", "0");
+  }
+
+  let count = parseInt(localStorage.getItem("nomanxCount") || "0");
+
+  if (count >= FREE_LIMIT) {
+    alert("❌ Free limit reached. Upgrade to PRO 🚀");
+    return false;
+  }
+
+  localStorage.setItem("nomanxCount", count + 1);
+  return true;
+}
