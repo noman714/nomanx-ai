@@ -167,3 +167,19 @@ function logout() {
 }
 </script>
 </script>
+<script>
+function setPlan(plan) {
+  localStorage.setItem("nomanxPlan", plan);
+  updatePlan();
+}
+
+function updatePlan() {
+  const plan = localStorage.getItem("nomanxPlan") || "FREE";
+  document.getElementById("currentPlan").innerText =
+    "💼 Current Plan: " + plan;
+}
+
+window.onload = () => {
+  updatePlan();
+};
+</script>
