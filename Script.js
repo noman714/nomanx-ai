@@ -207,3 +207,19 @@ function canSendMessage() {
   localStorage.setItem("nomanxCount", count + 1);
   return true;
 }
+<p id="limitInfo"></p>
+function updateLimitInfo() {
+  const plan = localStorage.getItem("nomanxPlan") || "FREE";
+
+  if (plan === "PRO") {
+    document.getElementById("limitInfo").innerText =
+      "🔥 PRO USER — Unlimited Messages";
+    return;
+  }
+
+  const used = localStorage.getItem("nomanxCount") || 0;
+  document.getElementById("limitInfo").innerText =
+    `Free Plan: ${used}/${FREE_LIMIT} messages used today`;
+}
+
+setInterval(updateLimitInfo, 1000);
