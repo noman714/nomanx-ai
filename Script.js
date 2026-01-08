@@ -141,4 +141,28 @@ function sendMessage() {
 
   input.value = "";
 }
+  <script>
+let currentUser = localStorage.getItem("nomanxUser");
+
+window.onload = () => {
+  if (currentUser) {
+    document.getElementById("welcome").innerText = "Welcome, " + currentUser + " 👋";
+    document.getElementById("welcome").style.display = "block";
+    document.getElementById("logoutBtn").style.display = "inline-block";
+  }
+};
+
+function login() {
+  const name = document.getElementById("username").value.trim();
+  if (!name) return alert("Please enter your name");
+
+  localStorage.setItem("nomanxUser", name);
+  location.reload();
+}
+
+function logout() {
+  localStorage.removeItem("nomanxUser");
+  location.reload();
+}
+</script>
 </script>
