@@ -135,7 +135,8 @@ function sendMessage() {
   }
 
   setTimeout(() => {
-    chatBox.innerHTML += `<div class="ai">${reply}</div>`;
+    const userName = localStorage.getItem("nomanxUser") || "Guest";
+chatBox.innerHTML += `<div class="user"><b>${userName}:</b> ${userText}</div>`;
     chatBox.scrollTop = chatBox.scrollHeight;
   }, 500);
 
