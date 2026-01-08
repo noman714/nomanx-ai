@@ -129,3 +129,25 @@ function sendMessage() {
   input.value = "";
 }
 </script>
+<section id="plans">
+  <h2>💎 Choose Your Plan</h2>
+
+  <div class="plan-box">
+    <div class="plan">
+      <h3>FREE</h3>
+      <p>✔ Limited AI Chat</p>
+      <p>✔ Basic Features</p>
+      <button onclick="setPlan('FREE')">Use Free</button>
+    </div>
+
+    <div class="plan pro">
+      <h3>PRO</h3>
+      <p>✔ Unlimited AI Chat</p>
+      <p>✔ All Features</p>
+      <p>✔ Priority Access</p>
+      <button onclick="setPlan('PRO')">Go Pro</button>
+    </div>
+  </div>
+
+  <p id="currentPlan"></p>
+</section>
