@@ -69,7 +69,8 @@ function sendMessage() {
 }
 </script>
 <script>
-function sendMessage() {
+  if (!canSendMessage()) return;
+function sendMessage() {sendMessage();
   const input = document.getElementById("userInput");
   const userText = input.value.trim();
   const msg = userText.toLowerCase();
