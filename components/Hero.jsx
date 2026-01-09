@@ -77,3 +77,5 @@ export default function Hero() {
     </div>
   );
 }
+<Link href="/dashboard/chat">AI Chat</Link>
+<Link href="/dashboard/image">Image AI</Link>
