@@ -2,3 +2,4 @@ git add .
 git commit -m "NomanX AI cinematic landing"
 git push
 npm run dev
+npm install @supabase/supabase-js
