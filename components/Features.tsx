@@ -56,3 +56,17 @@ export default function Features() {
     </section>
   );
 }
+import Link from "next/link";
+
+/* inside map */
+<Link href={
+  f.title.includes("Chat") ? "/chat" :
+  f.title.includes("Image") ? "/image" :
+  f.title.includes("Video Generator") ? "/video" :
+  f.title.includes("Enhancer") ? "/enhance" :
+  "/voice"
+}>
+  <button className="mt-6 glass-btn px-6 py-2 rounded-lg text-sm">
+    Open Tool →
+  </button>
+</Link>
