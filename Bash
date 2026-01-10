@@ -12,3 +12,6 @@ git push
 git add .
 git commit -m "UI Step 2: Glow + Glass + Animated AI Background"
 git push
+git add .
+git commit -m "UI Step 3: Feature cards AI ecosystem"
+git push
