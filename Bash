@@ -15,3 +15,6 @@ git push
 git add .
 git commit -m "UI Step 3: Feature cards AI ecosystem"
 git push
+git add .
+git commit -m "UI Step 4: Tool pages & routing"
+git push
