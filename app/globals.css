@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  background: #000;
+body {
+  background-color: #020617;
   color: white;
 }
-npm install framer-motion
