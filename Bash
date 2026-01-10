@@ -3,3 +3,5 @@ git commit -m "NomanX AI cinematic landing"
 git push
 npm run dev
 npm install @supabase/supabase-js
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
