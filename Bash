@@ -5,3 +5,7 @@ npm run dev
 npm install @supabase/supabase-js
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
+npm run dev
+git add .
+git commit -m "UI Step 1: Dark AI Hero Base"
+git push
