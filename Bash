@@ -9,3 +9,6 @@ npm run dev
 git add .
 git commit -m "UI Step 1: Dark AI Hero Base"
 git push
+git add .
+git commit -m "UI Step 2: Glow + Glass + Animated AI Background"
+git push
